@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>Userpedia</title>
+		<link href="/assets/application.css" media="all" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="page">
+			<h1>*</h1>
+			<h1>Userpedia</h1>
+			<h2>an open registry for all internet users</h2>
+
+			<p>The social web stinks right now:  we have a handful of proprietary networks that let you respond to other people using proprietary usernames, like @jack and +SergeyBrin. Thus far, we open web folk have proposed alternative solutions that rely on email addresses. But let's get real, the domain part in @gmail.com and @job.co have always been temporary masters, just like the @yahoo.com and @past.co that came before them. Clearly, we need something different.</p>
+			
+			<p id="crazy-dream">
+			Enter one programmer's crazy dream:<br />
+			a free username registry that all the open web can use,<br />
+			liberating us from proprietary network handles and dangling domains.<br />
+			</p>
+
+			<p>I call it the <em>Userpedia</em> and hope to widely distinguish its usernames by prepending them with asterisks (just like pointers in C). That's right my code-loving friends, we're making a dereference operator for people. Lay folk should feel free to call them starnames.</p>
+
+			<p class="center">Here's mine: *foy</p>
+
+			<p class="center">And here's some data associated with it:</p>
+
+			<ul>
+				<li>Name: Foy Savas</li>
+				<li>Square Icon: <a href="http://foysavas.com/images/foy-savas.png">http://foysavas.com/me.png</a></li>
+				<li>Preferred Email: <a href="mailto:foy@sav.as">foy@sav.as</a></li>
+				<li>Public Key: +809u3n521=</li>
+			</ul>
+
+			<p>Now, before you sign up for your own, let's establish some ground rules:</p>
+
+			<ol>
+				<li>When you join, you can only register a single username.</li>
+				<li>Before you can join, you'll have to be invited or a contact of a user.</li>
+				<li>If you game the system and squat on usernames, they'll be dealloced.</li>
+				<li>Usernames will 	eventually require free renewal, but even if yours expires, it'll still maintain record of the time period for which you held it.</li>
+				<li>If you need to switch your username (because *l33tt33n doesn't suit you anymore), you can, just not more than once each year.</li>
+			</ol>
+
+			<h2>Wait, tell me the future!</h2>
+
+			<p>Oh, there'll be OAuth, a slowly evolving registry protocol, and lots of ways to plug your own sites and apps into the Userpedia API.</p>
+
+			<p>For me, I'm going to use the Userpedia to build a better-than-email protocol over HTTP. I've already got a laundry list of revolutionary features that people love. Now, will my federated starmail system actually gain adoption? I've got no clue. But, what I do know is that without the foundation of something like the Userpedia, my starmail project would never be able to get off the ground.</p>
+
+			<p>Likewise, the Userpedia has the chance to open up innovation across the net for new projects. And so while I know that the future of the Userpedia and starnames will be bright, I don't know what exactly it will hold. After all, the future should be yours, and who knows what you'll build.</p>
+
+			<div class="quote">
+				"The best way to predict the future is to invent it."
+				&mdash; Alan Kay
+			</div>
+
+			<h2 id="signup">Join the Userpedia</h2>
+
+			<form action="/users" method="POST">
+				<div class="el">
+					<label for="username">Username</label>
+					<input name="username" />
+				</div>
+				<div class="el">
+					<label for="password">Password</label>
+					<input name="password" type="password" />
+				</div>
+				<div class="el">
+					<label for="email">Email Address</label>
+					<input name="email_address" />
+				</div>
+				<button>Register</button>
+			</form>
+
+
+
+			<h2>Extended Q&A</h2>
+			<p class="center">(collected from questions you've asked)</p>
+
+			<p>Q: Is the Userpedia a strictly real name system where I can only have one username?</p>
+			<p>A: The Userpedia is not necessarily a real name system, but the rules do state clearly that "you" can only have one username. If, however, for the sake of privacy, a person requires multiple identities (and therefore "you"s) to exist, then the Userpedia wholeheartedly encourages that each identity be allocated a username. All that said, squatters and spam bots are never allowed and, upon discovery, will be quickly and judiciously dealloced.</p>
+
+			<p>Q: Why is there a Facebook login after I register or try to register?</p>
+			<p>A: We've made the Userpedia an invite-only registry in order to minimize on spammers and squatters. While we let you individually invite people you know by email, we also want a quick way for you to grant the people you know access to the Userpedia. This in mind, if you login with Facebook, your Facebook friends will be able to register by logging in with Facebook on the Userpedia. By the way, we only store Facebook User IDs on our server and will never make them public. Finally, at some point, we will disable Facebook login and destroy the collected Facebook User IDs.</p>
+
+			<p>Q: Is this going to be federated?</p>
+			<p>A: While the registry itself is singular, Userpedia is intended to allow for the creation of user-level federation. In this way, the Userpedia is analogous to DNS, which though also singular, serves as the basis for domain-level federation.</p>
+
+			<p>Q: What kinds of user-level protocols could be built on top of the Userpedia?</p>
+			<p>A: *foy is going to make a user-to-user better-than-email protocol. Other potential protocols for others to build may include a user-to-user file transfer protocol, a user federated social broadcast protocol, or a social search protocol.</p>
+
+			<p>Q: Why another username?</p>
+			<p>A: This is it, the last one, we swear. More seriously, all the major identity vendors are tied to proprietary services. The Userpedia differs from them, in being no more than a username registry that will let others build out all the interesting apps, services, and protocols.</p>
+
+			<p>Q: Have you heard of i-names?<p>
+			<p>A: Yes, i-names were unfortunately tied to a fairly complicated XDI thing (we're not sure what to call it) and entailed annual registration fees through i-brokers. In contrast, the Userpedia is intended to be simple and free.</p>
+
+			<p>Q: Why don't you charge for this?</p>
+			<p>A: The Userpedia, like the Wikipedia, is intended to be for everyone, including those without discretionary income to spend. Moreover, because the Userpedia will offer such a simple service, we estimate that operating costs should be manageable low. If the Userpedia does become overwhelmingly popular and operating costs do become a problem, we may seek out donations or enlist the assistance of other organizations to act as regional mirrors.</p>
+
+			<p class="center"><a href="#signup">Sign me up, Userpedia!</a></p>
+    </div>
+  </body>
+</html>
